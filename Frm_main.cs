@@ -31,17 +31,13 @@ namespace DapperAsync
 
         private async void loadData()
         {
+            progressBar1.Visible = true;
 
             try
             {
-                progressBar1.Visible = true;
-
                 List<Model.Data> data = null;
 
                 data = await loadDataAsync();
-
-                progressBar1.Visible = false;
-
             }
             catch (Exception ex)
             {
